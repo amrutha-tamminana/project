@@ -7,10 +7,10 @@ this library is split into two main classes
 1. **AIntegers class**: used for operations of large integers
 2. **AFloat class**:used for operations of floating point data types upto 30 decimal precision
 Supports basic arithmetic operations i.e
-1. Addition(+)
-2. Subtraction(-)
-3. Multiplication(*)
-4. Division(/)
+i. Addition(+)
+ii. Subtraction(-)
+iii. Multiplication(*)
+iv. Division(/)
 ## How to use
 1. Import libraries
 2. Perform arithmetic operations
