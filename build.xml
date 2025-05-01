@@ -1,0 +1,28 @@
+<project name="arbitraryarithmetic" default="compile" basedir=".">
+
+	<property name="src_dir" value="src"/>
+	<property name="build_dir" value="build"/>
+	<property name="dist_dir" value="dist"/>
+	<property name="main_class" value="arbitraryarithmetic.MyInfArith"/>
+
+	<target name="remove">
+		<delete dir = "${build_dir}"/>
+		<delete dir = "${dist_dir}"/>
+	</target>
+
+	<target name = "compile">
+		<mkdir dir = "${build_dir}"/>
+		<javac srcdir="${src_dir}" destdir="${build_dir}" includeantruntime="false"/>
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="${build_dir}"/>
+		<jar destfile="${dist_dir}/aarithmetic.jar" basedir="${build_dir}">
+			<manifest>
+				<attribute name="Main_class" value ="${main_class}"/>
+			</manifest>
+		</jar>
+	</target>
+</project>
+
+
