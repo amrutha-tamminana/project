@@ -5,7 +5,7 @@ public class MyInfArith {
         String operation=arg[1];
         String n1=arg[2];
         String n2=arg[3];
-        //use switch cases for both int type and flost type
+        //use switch cases for both int type and flost type 
         if(type.equals("int")){
             AInteger num1=new AInteger(n1);
             AInteger num2=new AInteger(n2);

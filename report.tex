@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{graphicx} 
+
+\author{cs24btech11060 }
+\date{2 May 2025}
+
+\begin{document}
+
+\title{ARBITRARY ARITHMETIC}
+\maketitle
+\section{Introduction}
+This project implements an arbitrary precision arithmetic operations using java creating a library supporting integer and floating point operations for big numbers i.e for big integers and floating points upto 30 decimals. The core package arbitraryarithmetic includes classes of AInteger and AFloat, allowing operations addition, multiplication, subtraction and division. A command line interface MyInfArith is used for usage of the classes.
+\section{Overview of AInteger and AFloat}
+\subsection{AInteger}
+In this class, we are using arithmtic operations for big numbers.
+
+Addition of the big numbers without using big numbers can be done by using manual method for addition. That is first we split the string and we add required zeros where needed and then add each digit individually; If the addition of each digit exceeds 9, then we carry to the next digit and go on. and at the last we remove all extra zeros if any and convert the result array to the string. Also since it is integers, we should take care of the signs as well.
+
+Subtraction also goes the same way by borrowing from the next digit and then return the final string. If the second number is greater than the first one, then using the comparestrings helper, swap the numbers first, then subtract and at last add a negative sign as the output is negative. 
+
+When it comes to multiplication, first check the signs of the numbers and accordingly at last if the multiplied output is negative, then add a negative sign at the end to the string. And multiplication is done by multiplying each digit and taking carries. Remove all the leading zeros and obtain the final result string.
+
+In division of large integers, first check if the divisor is zero. If the divisor is zero then it should give an exception. And then division is performed in a long division method and the leading zeros are removed.
+
+The helper methods used here are comparestrings and subtractstrings. subtractstings are used in division method as we need to do subtraction in long division method.
+
+\subsection{AFloat}
+This is class follows AInteger.
+
+In addition of floating numbers, we first divide the integr and decimal parts and then merge them and add using AInteger. After that put decimal in the appropriate place and then convert that to the result string. The same goes for subtraction and multiplication.
+
+In division in floating numbers, throw an exception when divisor becomes zero and make precision of 30 digits after the decimal point and continue division upto that point.
+
+\subsection{MyInfArith}
+In MyInfArith using switch cases, it allows users to perform operations via terminal.
+
+\section{Limitations}
+\begin{itemize}
+\item The output for addition when given input small number first and then the larger numbers is resulting wrong result.
+\item In float operations the last digit is not rounded off to the nearest integer.
+\end{itemize}
+\end{document}
