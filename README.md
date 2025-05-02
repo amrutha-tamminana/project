@@ -5,6 +5,7 @@ this library is split into two main classes
 2. **AFloat**
 ## Package structure
 ```
+   project/
 |---src/
 |    |-AInteger.java #arbitrary precision integer class
 |    |-AFloat.java   #arbitrary precision float class
