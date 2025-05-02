@@ -3,6 +3,16 @@ This Java library provides support for performing **arbitrary-precision arithmet
 this library is split into two main classes
 1. **AInteger**
 2. **AFloat**
+## Package structure
+|---src/
+|    |-AInteger.java #arbitrary precision integer class
+|    |-AFloat.java   #arbitrary precision float class
+|    |-MyInfArith.java # command line for operations
+|---dist/aarithmetic.jar
+|---Test.java
+|---README.md
+|---report.pdf
+|---run.py
 ## Features
 1. **AIntegers class**: used for operations of large integers
 2. **AFloat class**:used for operations of floating point data types upto 30 decimal precision
